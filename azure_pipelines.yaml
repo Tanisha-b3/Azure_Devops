@@ -3,7 +3,7 @@ trigger:
   - main  # Run on every push to main branch
 
 pool:
-  name: SelfHostedPool   # or use: vmImage: 'ubuntu-latest'
+  name: linux-hosted-agent
 
 steps:
   - script: echo "Pipeline initialized successfully!"
