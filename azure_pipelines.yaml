@@ -1,0 +1,19 @@
+# azure-pipelines.yml
+trigger:
+  - main  # Run on every push to main branch
+
+pool:
+  name: SelfHostedPool   # or use: vmImage: 'ubuntu-latest'
+
+steps:
+  - script: echo "Pipeline initialized successfully!"
+    displayName: "Start Message"
+
+  - script: uname -a
+    displayName: "Check System Info"
+
+  - script: whoami
+    displayName: "Display Current User"
+
+  - script: df -h
+    displayName: "Check Disk Usage"
